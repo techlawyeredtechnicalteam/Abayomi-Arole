@@ -17,34 +17,19 @@ const cardVariants = {
 
 const focusAreas = [
   {
-    title: "Entertainment Law",
+    title: "CORPORATE, COMMERCIAL AND REGULATORY",
     description:
-      "Providing comprehensive legal counsel to creatives and entertainment entities in the negotiation, drafting, and enforcement of contracts, intellectual property protection, talent representation, and regulatory compliance across the media and entertainment landscape."
+      "AALP offers a wide range of Corporate and Commercial law services, including due diligence and company secretarial services. We have undertaken corporate and commercial work for many of Nigeria’s companies. We have an impressive advisory portfolio traversing such diverse issues as corporate structure, corporate contracts, corporate governance, regulation of corporations, the organisation and mode of subscription of capital, transferability of shares, composition of the board and management, labour, compensation, staff welfare and pension issues, finance, parent companies’ influence on and control of subsidiaries. "
   },
   {
-    title: "Real Estate & Construction Law",
+    title: "LITIGATION AND ARBITRATION",
     description:
-      "Delivering specialized legal advisory on real property acquisition, development structuring, land use regulation, construction agreements, leasing transactions, and dispute resolution involving land tenure, title, and encumbrances."
+      "AALP’s Dispute Resolution Practice is one of our most experienced, boasting an exceptional practice group of 4 dedicated lawyers. The department is headed by a Senior lawyer with nearly 15 years professional experience, and comprises other highly skilled practitioners who have very strong reputations in Nigeria’s litigation terrain and experience in both local and international arbitration."
   },
   {
-    title: "Immigration Law",
+    title: "FINANCE",
     description:
-      "Offering strategic legal representation in immigration matters, including visa procurement, permanent residency, citizenship applications, deportation defense, and compliance with immigration statutes and administrative procedures."
-  },
-  {
-    title: "Property Succession & Estate Planning",
-    description:
-      "Facilitating the orderly transfer of wealth through tailored estate planning instruments such as wills, trusts, powers of attorney, and succession schemes, while ensuring compliance with probate laws and asset protection protocols."
-  },
-  {
-    title: "Commercial & Corporate Law",
-    description:
-      "Advising corporate entities and entrepreneurs on commercial transactions, shareholder agreements, corporate governance, mergers and acquisitions, regulatory compliance, and legal risk management within the commercial framework."
-  },
-  {
-    title: "Human Rights & Public Interest Law",
-    description:
-      "Advocating for the protection and enforcement of fundamental rights and freedoms through litigation, policy advisory, and legal redress in matters involving discrimination, state accountability, and violations of civil and constitutional rights."
+      "AALP is a recognized player in the banking and finance sector by providing legal services to meet the expanding and increasingly complex requirements of clients. AALP has provided legal advisory services on major transactions and projects in various sectors such as power, oil and gas, mining, telecommunication including the negotiation of local and international credit facilities, loan and security documentation, structured financing, and perfection of financing packages and security interest issues. This has provided us with a wealth of knowledge and experience in the issues that governments and private sector participants face."
   }
 ];
 
@@ -101,8 +86,7 @@ export default function Home() {
                 Abayomi Arole Legal Practitioners
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Trusted legal advisors dedicated to protecting your business and
-                personal interests.
+                Legal Strategy, Practical Solutions, Trusted Results
               </p>
               <a
                 href="#contact"
@@ -129,7 +113,7 @@ export default function Home() {
                   About Us
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  At Honoredge Legal Practice, we deliver strategic and
+                  At Abayomi Arole Legal Practitioners, we deliver strategic and
                   practical legal services rooted in integrity and excellence.
                   Our team of seasoned attorneys collaborates closely with
                   clients across diverse industries to deliver results.
@@ -231,19 +215,39 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {[
                   {
-                    name: "Bukki Aderogba",
                     quote:
-                      "Working with Honoredge was seamless. Their dedication and attention to detail were unmatched."
+                      "AALP is “very meticulous in its handling of mandates; and the firm’s commercially savvy lawyers are particularly knowledgeable about the Nigerian market”."
                   },
                   {
-                    name: "Chinedu Godswill",
                     quote:
-                      "They listened, strategized, and delivered outstanding results. We couldn’t have asked for better support."
+                      "“At the top level of corporate and commercial practice in Nigeria”, AALP has “commercially sensitive lawyers who give appropriate and incisive legal advice”"
                   },
                   {
-                    name: "Emmanuel Folorunsho",
                     quote:
-                      "Professional, responsive, and trustworthy. My case was always handled with utmost care."
+                      "AALP’s “experience (in Banking & Finance practice) and knowledge of the legal system are extensive” "
+                  },
+                  {
+                    quote: "AALP’s “team effort is excellent”. "
+                  },
+                  {
+                    quote:
+                      "“The team has deep knowledge of Nigerian law, and its legal drafting skills are world-class. The lawyers are very conscientious, thorough and experienced.” "
+                  },
+                  {
+                    quote:
+                      "AALP “is a consistent all-rounder for all types of M&A, project finance, banking and capital markets and is a fantastic firm,”  "
+                  },
+                  {
+                    quote:
+                      "AALP provides ‘excellent advice – timely, direct and to the point’ "
+                  },
+                  {
+                    quote:
+                      "“Excellent”, “credible” and “highly professional” team at AALP "
+                  },
+                  {
+                    quote:
+                      "“This full service firm is well known for its oil and gas financing work, though it excels in a wide variety of banking and finance matters.” "
                   }
                 ].map((testimonial, index) => (
                   <div
@@ -266,7 +270,7 @@ export default function Home() {
                     </div>
 
                     <hr className="border-t border-gray-300 my-4" />
-                    <p className="italic text-gray-700">- {testimonial.name}</p>
+                    {/* <p className="italic text-gray-700">- {testimonial.name}</p> */}
                   </div>
                 ))}
               </div>
