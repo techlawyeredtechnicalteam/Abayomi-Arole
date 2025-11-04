@@ -30,6 +30,16 @@ const focusAreas = [
     title: "FINANCE",
     description:
       "AALP is a recognized player in the banking and finance sector by providing legal services to meet the expanding and increasingly complex requirements of clients. AALP has provided legal advisory services on major transactions and projects in various sectors such as power, oil and gas, mining, telecommunication including the negotiation of local and international credit facilities, loan and security documentation, structured financing, and perfection of financing packages and security interest issues. This has provided us with a wealth of knowledge and experience in the issues that governments and private sector participants face."
+  },
+  {
+    title: "PROPERTY LAW",
+    description:
+      "AALP offers a wide range of property law services, including due diligence and company secretarial services. We have undertaken property law work for many of Nigeria’s companies. Our services include acquisition and disposal of real estate, leasing, land use and development, regulatory compliance, title investigations, and property financing."
+  },
+  {
+    title: "Mortgage securities",
+    description:
+      "Title transfer and perfection of title deeds Registration of Debenture, mortgages, charges and releases General operation of the LUA as affecting risk assets."
   }
 ];
 
@@ -75,11 +85,11 @@ export default function Home() {
           {/* Hero Section */}
           <section className="relative h-screen w-full">
             <Image
-              src="/hero.png"
+              src="/buildings.png"
               alt="Honoredge Legal Practice Hero Image"
               fill
               priority
-              className="object-cover object-center z-0"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-60 z-10 flex flex-col items-center justify-center text-center text-white px-4">
               <h1 className="text-5xl md:text-6xl font-garamond font-bold mb-6 leading-tight">

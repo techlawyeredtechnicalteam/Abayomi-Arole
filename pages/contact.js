@@ -71,23 +71,6 @@ const Contact = () => {
                   </address>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <MapPin className="text-primary-300 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-gray-800 text-lg">
-                    Our Abuja Office
-                  </h3>
-                  <address className="not-italic text-lg">
-                    Suit D8, Victory Plaza
-                    <br />
-                    7 Onitsha Crescent Area11,
-                    <br />
-                    Garki
-                    <br />
-                    FCT Abuja, Nigeria
-                  </address>
-                </div>
-              </div>
 
               <div className="flex items-start gap-4">
                 <Phone className="text-primary-300 mt-1" />
@@ -101,9 +84,7 @@ const Contact = () => {
                 <Mail className="text-primary-300 mt-1" />
                 <div>
                   <h3 className="font-semibold text-gray-800 text-lg">Email</h3>
-                  <p className="text-gray-600 text-sm">
-                    aroleabayomi@gmail.com
-                  </p>
+                  <p className="text-gray-600 text-sm">info@arolelegal.com</p>
                 </div>
               </div>
             </motion.div>
