@@ -12,7 +12,7 @@ const attorneys = [
     image: "/owner.png"
   },
   {
-    name: "Mrs Tolulope Taiwo Esq",
+    name: "Oluwayomi Adejuyigbe",
     title: "Partner",
     // bio: 'James represents clients in complex civil litigation and arbitration across multiple jurisdictions.',
     image: "/lawyer.png"

@@ -39,6 +39,31 @@ export default function AboutUs() {
       title: "FINANCE",
       description:
         "AALP is a recognized player in the banking and finance sector by providing legal services to meet the expanding and increasingly complex requirements of clients. AALP has provided legal advisory services on major transactions and projects in various sectors such as power, oil and gas, mining, telecommunication including the negotiation of local and international credit facilities, loan and security documentation, structured financing, and perfection of financing packages and security interest issues. This has provided us with a wealth of knowledge and experience in the issues that governments and private sector participants face."
+    },
+    {
+      title: "PROPERTY LAW",
+      description:
+        "AALP offers a wide range of property law services, including due diligence and company secretarial services. We have undertaken property law work for many of Nigeria’s companies. Our services include acquisition and disposal of real estate, leasing, land use and development, regulatory compliance, title investigations, and property financing."
+    },
+    {
+      title: "Mortgage securities",
+      description:
+        "Title transfer and perfection of title deeds Registration of Debenture, mortgages, charges and releases General operation of the LUA as affecting risk assets."
+    },
+    {
+      title: "DEBT RECOVERY",
+      description:
+        "This module is designed along with the current practice of risk management prevailing in most of our institutions. The fast track debt recovery procedure is coined for the comparative advantage for which the module was designed to achieve."
+    },
+    {
+      title: "COMMERCIAL SERVICES {EMPLOYMENT LAW}",
+      description:
+        "Labour/employment law Wills and Probate, Administration of Estate, Land Disputes, Corporate transactions, Company secretarial duties Alternative dispute resolution."
+    },
+    {
+      title: "GENERAL ADVISORY",
+      description:
+        "This generally involves the conduct of searches at the Corporate affairs commission, Abuja; land searches at the various land registries in the country; provision of legal opinion on practically all contemporary legal issues appertaining to commerce; conduct of legal due diligence exercises; drafting and reviewing of contract documents etcetera."
     }
   ];
 
