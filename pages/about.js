@@ -69,7 +69,7 @@ export default function AboutUs() {
 
   return (
     <Layout>
-      <div className="bg-gray-50 min-h-screen py-20 px-6">
+      <div className="bg-gray-50 min-h-screen py-32 px-6">
         <Head>
           <title>Abayomi Arole Legal Practitioner | About Us</title>
         </Head>

@@ -35,7 +35,7 @@ const cardVariants = {
 const Attorneys = () => {
   return (
     <Layout>
-      <div className="bg-gray-100 min-h-screen py-20 px-4">
+      <div className="bg-gray-50 min-h-screen py-32 px-4">
         <Head>
           <title>Abayomi Arole Legal Practitioners | Attorneys</title>
         </Head>
@@ -63,12 +63,12 @@ const Attorneys = () => {
                 viewport={{ once: true }}
                 variants={cardVariants}
               >
-                <div className="relative w-full aspect-square max-w-sm mx-auto overflow-hidden rounded-2xl">
+                <div className="relative w-full aspect-square overflow-hidden rounded-2xl">
                   <Image
                     src={attorney.image}
                     alt={attorney.name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div className="p-6 text-center">
