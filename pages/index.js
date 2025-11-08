@@ -1,19 +1,13 @@
 "use client";
 
-import Head from "next/head";
-import Link from "next/link";
 import { StarIcon } from "@heroicons/react/24/solid";
 import Layout from "../components/Layout";
 import Image from "next/image";
 
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useAnimation } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-};
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const focusAreas = [
   {
@@ -30,39 +24,77 @@ const focusAreas = [
     title: "FINANCE",
     description:
       "AALP is a recognized player in the banking and finance sector by providing legal services to meet the expanding and increasingly complex requirements of clients. AALP has provided legal advisory services on major transactions and projects in various sectors such as power, oil and gas, mining, telecommunication including the negotiation of local and international credit facilities, loan and security documentation, structured financing, and perfection of financing packages and security interest issues. This has provided us with a wealth of knowledge and experience in the issues that governments and private sector participants face."
+  }
+  // {
+  //   title: "PROPERTY LAW",
+  //   description:
+  //     "AALP offers a wide range of property law services, including due diligence and company secretarial services. We have undertaken property law work for many of Nigeria’s companies. Our services include acquisition and disposal of real estate, leasing, land use and development, regulatory compliance, title investigations, and property financing."
+  // },
+  // {
+  //   title: "Mortgage securities",
+  //   description:
+  //     "Title transfer and perfection of title deeds Registration of Debenture, mortgages, charges and releases General operation of the LUA as affecting risk assets."
+  // }
+];
+
+const testimonials = [
+  {
+    quote:
+      "AALP is “very meticulous in its handling of mandates; and the firm’s commercially savvy lawyers are particularly knowledgeable about the Nigerian market”."
   },
   {
-    title: "PROPERTY LAW",
-    description:
-      "AALP offers a wide range of property law services, including due diligence and company secretarial services. We have undertaken property law work for many of Nigeria’s companies. Our services include acquisition and disposal of real estate, leasing, land use and development, regulatory compliance, title investigations, and property financing."
+    quote:
+      "“At the top level of corporate and commercial practice in Nigeria”, AALP has “commercially sensitive lawyers who give appropriate and incisive legal advice”"
   },
   {
-    title: "Mortgage securities",
-    description:
-      "Title transfer and perfection of title deeds Registration of Debenture, mortgages, charges and releases General operation of the LUA as affecting risk assets."
+    quote:
+      "AALP’s “experience (in Banking & Finance practice) and knowledge of the legal system are extensive” "
+  },
+  {
+    quote: "AALP’s “team effort is excellent”. "
+  },
+  {
+    quote:
+      "“The team has deep knowledge of Nigerian law, and its legal drafting skills are world-class. The lawyers are very conscientious, thorough and experienced.” "
+  },
+  {
+    quote:
+      "AALP “is a consistent all-rounder for all types of M&A, project finance, banking and capital markets and is a fantastic firm,”  "
+  },
+  {
+    quote: "AALP provides ‘excellent advice – timely, direct and to the point’ "
+  },
+  {
+    quote: "“Excellent”, “credible” and “highly professional” team at AALP "
+  },
+  {
+    quote:
+      "“This full service firm is well known for its oil and gas financing work, though it excels in a wide variety of banking and finance matters.” "
   }
 ];
 
-// Reusable AnimatedCard component
-function AnimatedCard({ title, description, delay }) {
-  return (
-    <motion.div
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ delay }}
-      className="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-primary-200 hover:shadow-lg transition duration-300 ease-in-out"
-    >
-      <h4 className="text-xl font-garamond font-semibold text-white mb-2">
-        {title}
-      </h4>
-      <p className="text-gray-400 text-sm">{description}</p>
-    </motion.div>
-  );
-}
-
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto testimonials every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
+
+  const goToPrevious = () => {
+    setCurrentIndex(
+      (prev = (prev - 1 + testimonials.length) % testimonials.length)
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true }); // animate only once
   const controls = useAnimation();
@@ -72,11 +104,6 @@ export default function Home() {
       controls.start("visible");
     }
   }, [isInView, controls]);
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
-  };
 
   return (
     <Layout>
@@ -110,7 +137,7 @@ export default function Home() {
           {/* About Section */}
           <section id="about" className="py-24 bg-gray-50 px-6">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="flex justify-center">
+              <div className="">
                 <Image
                   src="/logo.png"
                   alt="Honoredge Logo"
@@ -131,6 +158,33 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          {/* Practice Areas */}
+          <section
+            id="practice-areas"
+            className="bg-gray-900 text-white py-24 px-6 md:px-20"
+          >
+            <div className="max-w-7xl mx-auto text-center">
+              <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6">
+                Our{" "}
+                <span className="text-primary-200 italic">Areas of Focus</span>
+              </h2>
+              <p className="text-gray-400 text-lg mb-16">
+                Expertise across key fields to meet your unique legal needs.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                {focusAreas.map((area, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-gray-800 rounded-lg p-8 hover:bg-gray-700 transition duration-300 shadow-lg"
+                  >
+                    <h4 className="text-xl font-bold mb-4">{area.title}</h4>
+                    <p className="text-gray-300">{area.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>  
 
           {/* Why Choose Us */}
           <section className="py-24 bg-primary-100 text-black px-6">
@@ -184,33 +238,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Practice Areas */}
-          <section
-            id="practice-areas"
-            className="bg-gray-900 text-white py-24 px-6 md:px-20"
-          >
-            <div className="max-w-7xl mx-auto text-center">
-              <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6">
-                Our{" "}
-                <span className="text-primary-200 italic">Areas of Focus</span>
-              </h2>
-              <p className="text-gray-400 text-lg mb-16">
-                Expertise across key fields to meet your unique legal needs.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                {focusAreas.map((area, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-gray-800 rounded-lg p-8 hover:bg-gray-700 transition duration-300 shadow-lg"
-                  >
-                    <h4 className="text-xl font-bold mb-4">{area.title}</h4>
-                    <p className="text-gray-300">{area.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Testimonials */}
           <section className="bg-[#e7e3db] py-24 px-6 md:px-16 text-center">
             <div className="max-w-6xl mx-auto">
@@ -221,68 +248,57 @@ export default function Home() {
                 Hear directly from those we've helped achieve success.
               </p>
 
-              {/* Testimonials Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {[
-                  {
-                    quote:
-                      "AALP is “very meticulous in its handling of mandates; and the firm’s commercially savvy lawyers are particularly knowledgeable about the Nigerian market”."
-                  },
-                  {
-                    quote:
-                      "“At the top level of corporate and commercial practice in Nigeria”, AALP has “commercially sensitive lawyers who give appropriate and incisive legal advice”"
-                  },
-                  {
-                    quote:
-                      "AALP’s “experience (in Banking & Finance practice) and knowledge of the legal system are extensive” "
-                  },
-                  {
-                    quote: "AALP’s “team effort is excellent”. "
-                  },
-                  {
-                    quote:
-                      "“The team has deep knowledge of Nigerian law, and its legal drafting skills are world-class. The lawyers are very conscientious, thorough and experienced.” "
-                  },
-                  {
-                    quote:
-                      "AALP “is a consistent all-rounder for all types of M&A, project finance, banking and capital markets and is a fantastic firm,”  "
-                  },
-                  {
-                    quote:
-                      "AALP provides ‘excellent advice – timely, direct and to the point’ "
-                  },
-                  {
-                    quote:
-                      "“Excellent”, “credible” and “highly professional” team at AALP "
-                  },
-                  {
-                    quote:
-                      "“This full service firm is well known for its oil and gas financing work, though it excels in a wide variety of banking and finance matters.” "
-                  }
-                ].map((testimonial, index) => (
+              {/* Testimonials slider */}
+              <div className="relative">
+                {/* Testimonial Cards Container */}
+                <div className="overflow-hidden">
                   <div
-                    key={index}
-                    className="bg-white p-8 rounded-lg shadow-md flex flex-col justify-between h-full"
+                    className="flex transition-transform duration-700 ease-in-out"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                   >
-                    <div className="text-4xl text-primary-200 mb-4">“</div>
-                    <p className="text-gray-800 text-sm leading-relaxed mb-6">
-                      {testimonial.quote}
-                    </p>
+                    {testimonials.map((testimonial, index) => (
+                      <div key={index} className="w-full flex-shrink-0 px-4">
+                        <div className="bg-white p-8 md:p-12 rounded-lg shadow-md mx-auto max-w-3xl">
+                          <div className="text-5xl text-blue-950 mb-4">"</div>
+                          <p className="text-black text-base md:text-lg leading-relaxed mb-8">
+                            {testimonial.quote}
+                          </p>
 
-                    {/* ⭐ Star Rating */}
-                    <div
-                      className="flex items-center justify-center space-x-1 mb-4"
-                      aria-label="5 star rating"
-                    >
-                      {[...Array(5)].map((_, i) => (
-                        <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-                      ))}
-                    </div>
+                          {/* Star Rating */}
+                          <div className="flex items-center justify-center space-x-1 mb-6">
+                            {[...Array(5)].map((_, i) => (
+                              <StarIcon
+                                key={i}
+                                className="w-5 h-5 text-yellow-400 fill-yellow-400"
+                              />
+                            ))}
+                          </div>
 
-                    <hr className="border-t border-gray-300 my-4" />
-                    {/* <p className="italic text-gray-700">- {testimonial.name}</p> */}
+                          <hr className="border-t border-gray-300 my-6" />
+                          {/* <p className="italic text-black font-medium">
+                            - {testimonial.name}
+                          </p> */}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+                  aria-label="Previous testimonial"
+                >
+                  <ChevronLeft className="w-6 h-6 text-black" />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+                  aria-label="Next testimonial"
+                >
+                  <ChevronRight className="w-6 h-6 text-black" />
+                </button>
               </div>
             </div>
           </section>
@@ -300,7 +316,7 @@ export default function Home() {
               can support your legal journey.
             </p>
             <a
-              href="mailto:honoredgelp@gmail.com"
+              href="mailto:info@arolelegal.com"
               className="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300"
             >
               Contact Us

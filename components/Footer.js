@@ -58,7 +58,7 @@ export default function Footer() {
 
       {/* Bottom Section: Socials and Accessibility */}
       <div className="max-w-6xl mx-auto mt-12 border-t border-gray-500 pt-8 text-center md:text-left">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-center">
           {/* Social Links */}
           <div>
             <h4 className="text-xl font-garamond mb-4 md:mb-2">Follow Us</h4>
@@ -86,12 +86,6 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
-          {/* Accessibility Note */}
-          <p className="mt-6 md:mt-0 text-xs text-gray-800 max-w-sm">
-            We are an accessible workplace. Persons with disabilities are
-            welcome to apply.
-          </p>
         </div>
       </div>
     </footer>

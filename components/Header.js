@@ -12,7 +12,7 @@ export default function Header() {
     <header className="bg-gray-50 fixed w-full z-20 text-[#230562] shadow-lg py-4 px-8 md:px-6">
       <div className="max-w-7xl mx-auto flex justify-between items-center h-16">
         {/* Logo and Name */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="">
           <img
             src="/logo.png"
             alt="Honoredge Legal Practice Logo"
@@ -22,9 +22,6 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8">
-          <Link href="/" className="font-semibold relative group">
-            Home
-          </Link>
           {["About", "Attorneys", "Practice Areas", "Blog", "Contact"].map(
             (item, idx) => (
               <Link
@@ -37,7 +34,7 @@ export default function Header() {
                 className="relative group font-semibold tracking-wide"
               >
                 {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#230562] transition-all group-hover:w-full"></span>
+                {/* <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#230562] transition-all group-hover:w-full"></span> */}
               </Link>
             )
           )}
