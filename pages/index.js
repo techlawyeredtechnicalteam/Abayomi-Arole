@@ -137,12 +137,13 @@ export default function Home() {
           {/* About Section */}
           <section id="about" className="py-24 bg-gray-50 px-6">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="">
+              <div className="flex items-start">
                 <Image
                   src="/logo.png"
                   alt="Honoredge Logo"
-                  width={200}
-                  height={200}
+                  width={100}
+                  height={100}
+                  className="object-cover"
                 />
               </div>
               <div>
@@ -184,7 +185,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </section>  
+          </section>
 
           {/* Why Choose Us */}
           <section className="py-24 bg-primary-100 text-black px-6">
