@@ -48,7 +48,7 @@ const Attorneys = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-garamond font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-ubuntu font-bold text-gray-900 mb-4">
               Meet Our Attorneys
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -78,7 +78,7 @@ const Attorneys = () => {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-semibold font-garamond text-gray-900">
+                  <h3 className="text-xl font-semibold font-ubuntu text-gray-900">
                     {attorney.name}
                   </h3>
                   <p className="text-sm text-primary-200 mt-1 italic">

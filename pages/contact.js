@@ -33,7 +33,7 @@ const Contact = () => {
             custom={0}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold font-garamond text-gray-900">
+            <h1 className="text-4xl md:text-5xl font-bold font-ubuntu text-gray-900">
               Contact Us
             </h1>
             <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -103,9 +103,9 @@ const Contact = () => {
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </motion.div>
           </div>

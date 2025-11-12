@@ -15,7 +15,7 @@ export default function Header() {
         <Link href="/" className="">
           <img
             src="/logo.png"
-            alt="Honoredge Legal Practice Logo"
+            alt="Abayomi Arole Logo"
             className="h-28 md:h-32 object-cover"
           />
         </Link>
@@ -53,9 +53,9 @@ export default function Header() {
       {/* Mobile Nav Links */}
       {menuOpen && (
         <div className="md:hidden mt-4 px-4 py-4 bg-gray-50 rounded-lg text-[#230562] space-y-4 transition-all">
-          <Link href="/" className="font-semibold block">
+          {/* <Link href="/" className="font-semibold block">
             Home
-          </Link>
+          </Link> */}
           {["About", "Attorneys", "Practice Areas", "Blog", "Contact"].map(
             (item, idx) => (
               <Link

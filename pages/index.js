@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="font-sans text-gray-800">
+      <div className="font-ubuntu text-gray-800">
         <main className="">
           {/* Hero Section */}
           <section className="relative h-screen w-full">
@@ -57,7 +57,7 @@ export default function Home() {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-60 z-10 flex flex-col items-center justify-center text-center text-white px-4">
-              <h1 className="text-5xl md:text-6xl font-garamond font-bold mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-ubuntu font-bold mb-6 leading-tight">
                 Abayomi Arole Legal Practitioners
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
@@ -85,7 +85,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <h2 className="text-4xl font-garamond font-bold mb-4">
+                <h2 className="text-4xl font-ubuntu font-bold mb-4">
                   About Us
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -104,7 +104,7 @@ export default function Home() {
             className="bg-gray-900 text-white py-24 px-6 md:px-20"
           >
             <div className="max-w-7xl mx-auto text-center">
-              <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl font-ubuntu md:text-5xl font-bold mb-6">
                 Our{" "}
                 <span className="text-primary-200 italic">Areas of Focus</span>
               </h2>
@@ -128,7 +128,7 @@ export default function Home() {
           {/* Why Choose Us */}
           <section className="py-24 bg-primary-100 text-black px-6">
             <div className="max-w-7xl mx-auto text-center">
-              <h2 className="text-4xl font-garamond font-bold mb-12">
+              <h2 className="text-4xl font-ubuntu font-bold mb-12">
                 Why Partner With Us?
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -142,7 +142,7 @@ export default function Home() {
                     className="w-full h-[22rem] object-cover"
                   />
                   <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm p-4">
-                    <h3 className="text-2xl font-semibold font-garamond mb-4">
+                    <h3 className="text-2xl font-semibold font-ubuntu mb-4">
                       Our Mission
                     </h3>
                     <p className="text-sm text-gray-700 text-center mt-2">
@@ -163,7 +163,7 @@ export default function Home() {
                     className="w-full h-[22rem] object-cover"
                   />
                   <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm p-4">
-                    <h3 className="text-2xl font-semibold font-garamond mb-4">
+                    <h3 className="text-2xl font-semibold font-ubuntu mb-4">
                       Our Values
                     </h3>
                     <p className="text-sm text-gray-700 text-center mt-2">
@@ -180,7 +180,7 @@ export default function Home() {
           {/* Testimonials */}
           <section className="bg-[#e7e3db] py-24 px-6 md:px-16 text-center">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-garamond md:text-5xl font-bold mb-6 text-gray-900">
+              <h2 className="text-4xl font-ubuntu md:text-5xl font-bold mb-6 text-gray-900">
                 Client Testimonials
               </h2>
               <p className="text-lg text-gray-700 mb-16">
@@ -247,7 +247,7 @@ export default function Home() {
             id="contact"
             className="bg-primary-200 text-white py-24 px-4 text-center"
           >
-            <h2 className="text-4xl font-garamond font-bold mb-6">
+            <h2 className="text-4xl font-ubuntu font-bold mb-6">
               Let's Get Started
             </h2>
             <p className="mb-8 text-lg max-w-2xl mx-auto">

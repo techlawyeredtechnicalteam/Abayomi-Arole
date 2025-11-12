@@ -1,22 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* This style will apply a line under the text */
 .group::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #230562; /* Tailwind indigo-600 or any color you prefer */
-    transition: width 0.3s ease-in-out;
-    font-weight: 400;
-  }
-  
-  .group:hover::after {
-    width: 100%;
-  }
-  
-  
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #230562;
+  /* Tailwind indigo-600 or any color you prefer */
+  transition: width 0.3s ease-in-out;
+  font-weight: 400;
+}
+
+.group:hover::after {
+  width: 100%;
+}

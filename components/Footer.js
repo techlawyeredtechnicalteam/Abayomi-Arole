@@ -21,7 +21,7 @@ export default function Footer() {
 
         {/* Contact Information */}
         <div className="flex flex-col space-y-2">
-          <h4 className="text-2xl font-garamond mb-4">Contact Details Lagos</h4>
+          <h4 className="text-2xl font-ubuntu mb-4">Contact Details</h4>
           <address className="not-italic text-lg">
             1ST FLOOR,
             <br />
@@ -47,7 +47,7 @@ export default function Footer() {
 
         {/* Office Hours */}
         <div className="flex flex-col space-y-2">
-          <h4 className="text-2xl font-garamond mb-4">Office Hours</h4>
+          <h4 className="text-2xl font-ubuntu mb-4">Office Hours</h4>
           <div className="text-lg">
             <p>Monday to Friday: 9:00 AM – 6:00 PM</p>
             <p>Saturday: Closed</p>
@@ -61,7 +61,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           {/* Social Links */}
           <div>
-            <h4 className="text-xl font-garamond mb-4 md:mb-2">Follow Us</h4>
+            <h4 className="text-xl font-ubuntu mb-4 md:mb-2">Follow Us</h4>
             <div className="flex justify-center md:justify-start space-x-6 text-2xl">
               <a
                 href="#"

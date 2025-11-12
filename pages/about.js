@@ -41,7 +41,7 @@ export default function AboutUs() {
             variants={slideUp}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-garamond">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-ubuntu">
               About Abayomi Arole Legal Practitioner
             </h1>
             <div className="mt-6 text-lg text-gray-600 max-w-7xl mx-auto text-justify">
@@ -100,7 +100,7 @@ export default function AboutUs() {
           </motion.section>
 
           {/* Mission, Vision, Values */}
-          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               {
                 title: "Our Mission",
@@ -153,7 +153,7 @@ export default function AboutUs() {
             variants={slideUp}
             className="text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-garamond mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-ubuntu mb-8">
               Our Focus Areas
             </h2>
 
@@ -166,7 +166,7 @@ export default function AboutUs() {
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {focusAreas.map((area, i) => (
                 <motion.div
                   key={area.title}
