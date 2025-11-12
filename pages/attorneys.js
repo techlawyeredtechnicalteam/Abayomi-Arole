@@ -12,10 +12,16 @@ const attorneys = [
     image: "/owner.png"
   },
   {
-    name: "Oluwayomi Adejuyigbe",
+    name: "Itunuoluwa Umar Lawal",
     title: "Partner",
     // bio: 'James represents clients in complex civil litigation and arbitration across multiple jurisdictions.',
     image: "/lawyer.png"
+  },
+  {
+    name: "Oluwayomi Adejuyigbe",
+    title: "Partner",
+    // bio: 'James represents clients in complex civil litigation and arbitration across multiple jurisdictions.',
+    image: "/lawyer-2.png"
   }
 ];
 
@@ -52,7 +58,7 @@ const Attorneys = () => {
           </div>
 
           {/* Attorney Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 px-6 lg:px-60">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 lg:px-60">
             {attorneys.map((attorney, i) => (
               <motion.div
                 key={attorney.name}

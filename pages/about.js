@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/Layout";
+import { focusAreas } from "../src/data/focusAreas";
 
 // Animations
 const slideUp = {
@@ -24,49 +25,6 @@ const scaleIn = {
 };
 
 export default function AboutUs() {
-  const focusAreas = [
-    {
-      title: "CORPORATE, COMMERCIAL AND REGULATORY",
-      description:
-        "AALP offers a wide range of Corporate and Commercial law services, including due diligence and company secretarial services. We have undertaken corporate and commercial work for many of Nigeria’s companies. We have an impressive advisory portfolio traversing such diverse issues as corporate structure, corporate contracts, corporate governance, regulation of corporations, the organisation and mode of subscription of capital, transferability of shares, composition of the board and management, labour, compensation, staff welfare and pension issues, finance, parent companies’ influence on and control of subsidiaries. "
-    },
-    {
-      title: "LITIGATION AND ARBITRATION",
-      description:
-        "AALP’s Dispute Resolution Practice is one of our most experienced, boasting an exceptional practice group of 4 dedicated lawyers. The department is headed by a Senior lawyer with nearly 15 years professional experience, and comprises other highly skilled practitioners who have very strong reputations in Nigeria’s litigation terrain and experience in both local and international arbitration."
-    },
-    {
-      title: "FINANCE",
-      description:
-        "AALP is a recognized player in the banking and finance sector by providing legal services to meet the expanding and increasingly complex requirements of clients. AALP has provided legal advisory services on major transactions and projects in various sectors such as power, oil and gas, mining, telecommunication including the negotiation of local and international credit facilities, loan and security documentation, structured financing, and perfection of financing packages and security interest issues. This has provided us with a wealth of knowledge and experience in the issues that governments and private sector participants face."
-    },
-    {
-      title: "PROPERTY LAW",
-      description:
-        "AALP offers a wide range of property law services, including due diligence and company secretarial services. We have undertaken property law work for many of Nigeria’s companies. Our services include acquisition and disposal of real estate, leasing, land use and development, regulatory compliance, title investigations, and property financing."
-    },
-    {
-      title: "Mortgage securities",
-      description:
-        "Title transfer and perfection of title deeds Registration of Debenture, mortgages, charges and releases General operation of the LUA as affecting risk assets."
-    },
-    {
-      title: "DEBT RECOVERY",
-      description:
-        "This module is designed along with the current practice of risk management prevailing in most of our institutions. The fast track debt recovery procedure is coined for the comparative advantage for which the module was designed to achieve."
-    },
-    {
-      title: "COMMERCIAL SERVICES {EMPLOYMENT LAW}",
-      description:
-        "Labour/employment law Wills and Probate, Administration of Estate, Land Disputes, Corporate transactions, Company secretarial duties Alternative dispute resolution."
-    },
-    {
-      title: "GENERAL ADVISORY",
-      description:
-        "This generally involves the conduct of searches at the Corporate affairs commission, Abuja; land searches at the various land registries in the country; provision of legal opinion on practically all contemporary legal issues appertaining to commerce; conduct of legal due diligence exercises; drafting and reviewing of contract documents etcetera."
-    }
-  ];
-
   return (
     <Layout>
       <div className="bg-gray-50 min-h-screen py-32 px-6">
@@ -86,13 +44,63 @@ export default function AboutUs() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-garamond">
               About Abayomi Arole Legal Practitioner
             </h1>
-            <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-              Legal Strategy, Practical Solutions, Trusted Results
-            </p>
+            <div className="mt-6 text-lg text-gray-600 max-w-7xl mx-auto text-justify">
+              <p>
+                Abayomi Arole Legal Practitioners (AALP) is a full-service law
+                firm established with a focus on providing innovative and
+                comprehensive legal solutions to meet the diverse needs of
+                clients. Founded by Abayomi Arole and other seasoned legal
+                professionals, our firm operates with a deep understanding of
+                both local and international business environments, offering a
+                strong blend of legal expertise and commercial insight. At AALP,
+                we specialize in a wide range of legal services, including
+                Corporate and Commercial Law, Litigation and Dispute Resolution,
+                Banking and Finance, Real Estate, Labour and Employment Law,
+                Telecommunications, and Taxation.
+              </p>
+              <br />
+              <p>
+                Our team is committed to delivering practical, business-driven
+                legal advice that is aligned with the objectives of our clients.
+                Our firm is recognized for its dedication to providing
+                high-quality, efficient, and timely legal solutions. Over the
+                years, we have earned the trust of major corporations, banks,
+                multinational companies, and government agencies, offering both
+                litigation and advisory services tailored to their specific
+                needs. Our approach combines a strong understanding of legal
+                principles with a commercial mindset. We take pride in
+                delivering exceptional results through diligent, practical, and
+                forward-thinking strategies.
+              </p>
+              <br />
+              <p>
+                By understanding our clients' industries and markets, we offer
+                insights that address legal challenges effectively, enabling
+                them to navigate complex regulatory frameworks, optimize
+                business operations, and resolve disputes efficiently. Our
+                Clients include a broad spectrum of organizations, ranging from
+                corporate giants and international businesses to local startups
+                and private individuals, all of whom benefit from our
+                personalized approach and steadfast commitment to excellence.
+                With a team of highly qualified lawyers, including experts in
+                financial law, infrastructure, energy law, and international
+                arbitration, AALP is strategically positioned to advise on
+                complex projects, guide transactions, and represent clients in
+                contentious matters across multiple jurisdictions.
+              </p>
+              <br />
+              <p>
+                At AALP, we value long-term relationships with our clients,
+                built on trust, professionalism, and mutual respect. Our team is
+                committed to navigating the complexities of the legal landscape
+                to offer clear, actionable solutions for businesses and
+                individuals alike.
+              </p>
+            </div>
           </motion.section>
 
           {/* Mission, Vision, Values */}
-          <section className="grid md:grid-cols-3 gap-12">
+          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
               {
                 title: "Our Mission",
@@ -101,7 +109,7 @@ export default function AboutUs() {
               },
               {
                 title: "Our Vision",
-                text: "To redefine the legal landscape by empowering individuals and businesses through exceptional advocacy and trusted counsel.",
+                text: "Our Vision is to be recognized as the leading provider of legal services in Nigeria, offering trusted and insightful solutions to a diverse clientele while maintaining the highest standards of integrity, professionalism, and client service.",
                 image: "/vision.png"
               },
               {
@@ -158,7 +166,7 @@ export default function AboutUs() {
               />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
               {focusAreas.map((area, i) => (
                 <motion.div
                   key={area.title}

@@ -27,9 +27,9 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content="https://www.honoredgelp.vercel.app/hero.png"
+          content="https://abayomi-arole.vercel.app/hero.png"
         />
-        <meta property="og:url" content="https://www.honoredgelp.vercel.app" />
+        <meta property="og:url" content="https://abayomi-arole.vercel.app/" />
         <meta
           property="og:site_name"
           content="Abayomi Arole Legal Practitioners"
@@ -47,9 +47,9 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name="twitter:image"
-          content="https://www.honoredgelp.vercel.app/hero.png"
+          content="https://abayomi-arole.vercel.app/hero.png"
         />
-        <meta name="twitter:site" content="@honoredgelp" />
+        <meta name="twitter:site" content="@abayomiarole" />
 
         {/* Favicon */}
         <link rel="icon" href="/logo.png" />
@@ -71,8 +71,8 @@ function MyApp({ Component, pageProps }) {
               "@context": "https://schema.org",
               "@type": "LegalService",
               name: "Abayomi Arole Legal Practitioners",
-              url: "https://www.honoredgelp.vercel.app",
-              logo: "https://www.honoredgelp.com/logo.png",
+              url: "https://abayomi-arole.vercel.app",
+              logo: "https://abayomi-arole.vercel.app/logo.png",
               description:
                 "Top-tier legal services in Corporate Law, Real Estate, Immigration, and more.",
               address: {
@@ -82,9 +82,9 @@ function MyApp({ Component, pageProps }) {
                 postalCode: "101001"
               },
               sameAs: [
-                "https://twitter.com/honoredgelp",
-                "https://www.linkedin.com/company/honoredgelegalpractice",
-                "https://www.facebook.com/honoredgelp"
+                "https://twitter.com/abayomiarole",
+                "https://www.linkedin.com/company/abayomi-arole-legal-practitioners",
+                "https://www.facebook.com/abayomiarole"
               ]
             })
           }}

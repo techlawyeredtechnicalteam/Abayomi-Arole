@@ -8,70 +8,8 @@ import { useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const focusAreas = [
-  {
-    title: "CORPORATE, COMMERCIAL AND REGULATORY",
-    description:
-      "AALP offers a wide range of Corporate and Commercial law services, including due diligence and company secretarial services. We have undertaken corporate and commercial work for many of Nigeria’s companies. We have an impressive advisory portfolio traversing such diverse issues as corporate structure, corporate contracts, corporate governance, regulation of corporations, the organisation and mode of subscription of capital, transferability of shares, composition of the board and management, labour, compensation, staff welfare and pension issues, finance, parent companies’ influence on and control of subsidiaries. "
-  },
-  {
-    title: "LITIGATION AND ARBITRATION",
-    description:
-      "AALP’s Dispute Resolution Practice is one of our most experienced, boasting an exceptional practice group of 4 dedicated lawyers. The department is headed by a Senior lawyer with nearly 15 years professional experience, and comprises other highly skilled practitioners who have very strong reputations in Nigeria’s litigation terrain and experience in both local and international arbitration."
-  },
-  {
-    title: "FINANCE",
-    description:
-      "AALP is a recognized player in the banking and finance sector by providing legal services to meet the expanding and increasingly complex requirements of clients. AALP has provided legal advisory services on major transactions and projects in various sectors such as power, oil and gas, mining, telecommunication including the negotiation of local and international credit facilities, loan and security documentation, structured financing, and perfection of financing packages and security interest issues. This has provided us with a wealth of knowledge and experience in the issues that governments and private sector participants face."
-  }
-  // {
-  //   title: "PROPERTY LAW",
-  //   description:
-  //     "AALP offers a wide range of property law services, including due diligence and company secretarial services. We have undertaken property law work for many of Nigeria’s companies. Our services include acquisition and disposal of real estate, leasing, land use and development, regulatory compliance, title investigations, and property financing."
-  // },
-  // {
-  //   title: "Mortgage securities",
-  //   description:
-  //     "Title transfer and perfection of title deeds Registration of Debenture, mortgages, charges and releases General operation of the LUA as affecting risk assets."
-  // }
-];
-
-const testimonials = [
-  {
-    quote:
-      "AALP is “very meticulous in its handling of mandates; and the firm’s commercially savvy lawyers are particularly knowledgeable about the Nigerian market”."
-  },
-  {
-    quote:
-      "“At the top level of corporate and commercial practice in Nigeria”, AALP has “commercially sensitive lawyers who give appropriate and incisive legal advice”"
-  },
-  {
-    quote:
-      "AALP’s “experience (in Banking & Finance practice) and knowledge of the legal system are extensive” "
-  },
-  {
-    quote: "AALP’s “team effort is excellent”. "
-  },
-  {
-    quote:
-      "“The team has deep knowledge of Nigerian law, and its legal drafting skills are world-class. The lawyers are very conscientious, thorough and experienced.” "
-  },
-  {
-    quote:
-      "AALP “is a consistent all-rounder for all types of M&A, project finance, banking and capital markets and is a fantastic firm,”  "
-  },
-  {
-    quote: "AALP provides ‘excellent advice – timely, direct and to the point’ "
-  },
-  {
-    quote: "“Excellent”, “credible” and “highly professional” team at AALP "
-  },
-  {
-    quote:
-      "“This full service firm is well known for its oil and gas financing work, though it excels in a wide variety of banking and finance matters.” "
-  }
-];
+import { focusAreas } from "../src/data/focusAreas";
+import { testimonials } from "../src/data/testimonial";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -113,7 +51,7 @@ export default function Home() {
           <section className="relative h-screen w-full">
             <Image
               src="/buildings.png"
-              alt="Honoredge Legal Practice Hero Image"
+              alt="Abayomi Arole Legal Practitioners Hero Image"
               fill
               priority
               className="object-cover"
@@ -140,7 +78,7 @@ export default function Home() {
               <div className="flex items-start">
                 <Image
                   src="/logo.png"
-                  alt="Honoredge Logo"
+                  alt="Abayomi Arole Legal Practitioners Logo"
                   width={100}
                   height={100}
                   className="object-cover"
