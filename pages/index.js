@@ -63,12 +63,12 @@ export default function Home() {
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Legal Strategy, Practical Solutions, Trusted Results
               </p>
-              <a
+              {/* <a
                 href="#contact"
                 className="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300"
               >
                 Schedule a Consultation
-              </a>
+              </a> */}
             </div>
           </section>
 
